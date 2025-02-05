@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Recipes - Your Diet Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Shared Styles -->
+    <!-- <link rel = "stylesheet" href="../static/css/style.css" > -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/style.css') }}"> 
+
+
+
+</head>
+<body>
+ 
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{{ url_for('home') }}">Your Logo</a>
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        
+
+
+    <!-- Hero Section -->
+
+    <section class="content-grids section-padding">
+        <div class="container">
+
+            <!-- Articles Grid -->
+            <div class="grid-section">
+                <h2>Health & Nutrition Articles</h2>
+                <div class="articles-grid">
+                    <!-- Row 1 -->
+
+                    <!-- card 1 -->
+                    <div class="article-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/articles/workout-nutrition.jpg') }}" alt="Workout Nutrition">
+                            
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Workout</span>
+                                <span>Nutrition</span>
+                            </div>
+                            <h3>Pre/Post Workout Nutrition</h3>
+                            <p>Optimize your workout results with proper nutrition...</p>
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+
+                    <div class="article-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/articles/mindful-eating.jpg') }}" alt="Mindful Eating">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Wellness</span>
+                                <span>Mental Health</span>
+                            </div>
+                            <h3>Mindful Eating Practices</h3>
+                            <p>Learn how to develop a healthier relationship with food...</p>
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+
+                    <div class="article-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/articles/meal-prep.jpg') }}" alt="Meal Prep">
+                    
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Meal Prep</span>
+                                <span>Organization</span>
+                            </div>
+                            <h3>Meal Prep Mastery</h3>
+                            <p>Efficient meal planning strategies for busy professionals...</p>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+
+                    <div class="article-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/articles/supplements.jpg') }}" alt="Supplements">
+                    
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Supplements</span>
+                                <span>Nutrition</span>
+                            </div>
+                            <h3>Supplement Guide</h3>
+                            <p>Understanding essential supplements for optimal health...</p>
+                        </div>
+                    </div>
+
+                    <!-- card 5 -->
+
+                    <div class="article-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/articles/workout-nutrition.jpg') }}" alt="Workout Nutrition">
+                            
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Workout</span>
+                                <span>Nutrition</span>
+                            </div>
+                            <h3>Pre/Post Workout Nutrition</h3>
+                            <p>Optimize your workout results with proper nutrition...</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+
+
+                    <div class="article-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/articles/weight-loss.jpg') }}" alt="Weight Loss">
+                            
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Weight Loss</span>
+                                <span>Health</span>
+                            </div>
+                            <h3>Sustainable Weight Loss</h3>
+                            <p>Evidence-based strategies for long-term weight management...</p>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/articles/gut-health.jpg') }}" alt="Gut Health">
+                             <span class="read-time">6 min read</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Gut Health</span>
+                                <span>Wellness</span>
+                            </div>
+                            <h3>Gut Health Guide</h3>
+                            <p>Understanding the importance of gut microbiome...</p>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/articles/hydration.jpg') }}" alt="Hydration">
+                            <span class="read-time">5 min read</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Hydration</span>
+                                <span>Health</span>
+                            </div>
+                            <h3>Hydration Essentials</h3>
+                            <p>Tips for staying properly hydrated throughout the day...</p>
+                        </div>
+                    </div>
+
+                    <!-- Continue with remaining rows of article cards... -->
+                </div>
+            </div>
+
+            <!-- Recipes Grid -->
+            <div class="grid-section">
+                <h2>Healthy Recipes</h2>
+                <div class="recipes-grid">
+                    <!-- Recipe Card 1 -->
+                    <div class="recipe-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/recipes/overnight-oats.jpg') }}" alt="Overnight Oats">
+                            <span class="prep-time">10 mins</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Breakfast</span>
+                                <span>Meal Prep</span>
+                            </div>
+                            <h3>Protein Overnight Oats</h3>
+                            <div class="recipe-info">
+                                <span><i class="fas fa-fire"></i> 320 cal</span>
+                                <span><i class="fas fa-dumbbell"></i> 20g protein</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipe Card 2 -->
+                    <div class="recipe-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/recipes/quinoa-bowl.jpg') }}" alt="Quinoa Bowl">
+                            <span class="prep-time">20 mins</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Lunch</span>
+                                <span>High Protein</span>
+                            </div>
+                            <h3>Mediterranean Quinoa Bowl</h3>
+                            <div class="recipe-info">
+                                <span><i class="fas fa-fire"></i> 380 cal</span>
+                                <span><i class="fas fa-dumbbell"></i> 15g protein</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipe Card 3 -->
+                    <div class="recipe-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/recipes/smoothie-bowl.jpg') }}" alt="Smoothie Bowl">
+                            <span class="prep-time">15 mins</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Breakfast</span>
+                                <span>Vegan</span>
+                            </div>
+                            <h3>Antioxidant Smoothie Bowl</h3>
+                            <div class="recipe-info">
+                                <span><i class="fas fa-fire"></i> 290 cal</span>
+                                <span><i class="fas fa-dumbbell"></i> 12g protein</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Recipe Cards Row 1 -->
+                    <div class="recipe-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/recipes/protein-shake.jpg') }}" alt="Protein Shake">
+                       <span class="prep-time">15 mins</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Breakfast</span>
+                                <span>Vegan</span>
+                            </div>
+                            <h3>Antioxidant Smoothie Bowl</h3>
+                            <div class="recipe-info">
+                                <span><i class="fas fa-fire"></i> 290 cal</span>
+                                <span><i class="fas fa-dumbbell"></i> 12g protein</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/recipes/chicken-salad.jpg') }}" alt="Chicken Salad">
+                        <span class="prep-time">25 mins</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Lunch</span>
+                                <span>High Protein</span>
+                            </div>
+                            <h3>Grilled Chicken Salad</h3>
+                            <div class="recipe-info">
+                                <span><i class="fas fa-fire"></i> 350 cal</span>
+                                <span><i class="fas fa-dumbbell"></i> 28g protein</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/recipes/protein-pancakes.jpg') }}" alt="Protein Pancakes">
+                            <span class="prep-time">20 mins</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Breakfast</span>
+                                <span>High Protein</span>
+                            </div>
+                            <h3>Banana Protein Pancakes</h3>
+                            <div class="recipe-info">
+                                <span><i class="fas fa-fire"></i> 310 cal</span>
+                                <span><i class="fas fa-dumbbell"></i> 24g protein</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/recipes/tofu-stir-fry.jpg') }}" alt="Tofu Stir Fry">
+                            <span class="prep-time">30 mins</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Dinner</span>
+                                <span>Vegetarian</span>
+                            </div>
+                            <h3>Spicy Tofu Stir Fry</h3>
+                            <div class="recipe-info">
+                                <span><i class="fas fa-fire"></i> 340 cal</span>
+                                <span><i class="fas fa-dumbbell"></i> 18g protein</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="recipe-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/recipes/protein-shake.jpg') }}" alt="Protein Shake">
+                       <span class="prep-time">5 mins</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Post-Workout</span>
+                                <span>High Protein</span>
+                            </div>
+                            <h3>Berry Protein Shake</h3>
+                            <div class="recipe-info">
+                                <span><i class="fas fa-fire"></i> 220 cal</span>
+                                <span><i class="fas fa-dumbbell"></i> 30g protein</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='images/recipes/salmon-bowl.jpg') }}" alt="Salmon Bowl">
+                            <span class="prep-time">25 mins</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Dinner</span>
+                                <span>Omega-3</span>
+                            </div>
+                            <h3>Teriyaki Salmon Bowl</h3>
+                            <div class="recipe-info">
+                                <span><i class="fas fa-fire"></i> 420 cal</span>
+                                <span><i class="fas fa-dumbbell"></i> 32g protein</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <span>
+          <i class="fas fa-phone-alt"></i>
+          <p>+1 123 456 7890</p>
+        </span>
+        <span>
+          <i class="fas fa-envelope"></i>
+          <p>support@example.com</p>
+        </span>
+        <span>
+          <i class="fas fa-map-marker-alt"></i>
+          <p>123 Example Street, City, Country</p>
+        </span>
+      </div>
+  
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Example Company. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

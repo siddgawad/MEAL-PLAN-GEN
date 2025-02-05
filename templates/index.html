@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>FitParivaar</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+        <a href="{{ url_for('home') }}">Your Logo</a>
+    </div>
+    
+    <ul class="nav-links" id="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+
+  <!-- Hero Section -->
+   <header class="hero">   
+ <div class="hero-content"> 
+        <h1>Transform Your Life Through Nutrition</h1>
+        <p>Expert guidance for your wellness journey</p>
+        <a href="{{ url_for('contact') }}" class="cta-button">Book a Consultation</a>
+    </div>
+  </header>
+
+    <!-- Meal Plan Form -->
+    <section class="meal-plan-section">
+        <h2>Get Your Personalized Meal Plan</h2>
+        <form id="mealPlanForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+    
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+    
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" required>
+    
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" required>
+    
+            <label for="goal">Goal:</label>
+            <select id="goal" required>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Muscle Gain">Muscle Gain</option>
+                <option value="Maintain Weight">Maintain Weight</option>
+            </select>
+    
+            <label for="health">Health Conditions (comma-separated):</label>
+            <input type="text" id="health">
+    
+            <label for="diet">Dietary Preference:</label>
+            <select id="diet" required>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+            </select>
+    
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" required>
+    
+            <button type="submit">Generate Meal Plan</button>
+        </form>
+    
+        <div id="mealPlanOutput"></div>
+    </section>
+    
+
+    <!-- Services Section -->
+
+    <section class="team section-padding">
+        <div class = "container">
+            <header><h2 class="title-services">Our Comprehensive Services</h2></header>
+            <p class="intro-services">Discover Personalised Services</p>
+
+            <!-- GRID LAYOUT FOR SERVICES -->
+
+            <div class="services-grid">
+
+                <!-- Service Card 1 -->
+                 
+                <div class="service-card fade-in">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Personalized Meal Planning</h3>
+                    <p class="service-description">Expert-crafted meal plans that align with your lifestyle, preferences, and health goals.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Custom Weekly Milestones</span>
+                        <span><i class="fas fa-check"></i> Grocery Shopping Lists</span>
+                        <span><i class="fas fa-check"></i> Nutritional Analysis</span>
+                        <span><i class="fas fa-check"></i> Recipe Database Access</span>
+                        <span><i class="fas fa-check"></i> Dietary Restrictions Support</span>
+                    </div>
+                    <div class="service-price">
+                        <span class="price">$99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <a href="#" class="service-cta">Start Your Plan</a>
+                </div>
+
+                <!-- Service Card 2 (Premium) -->
+                <div class="service-card premium fade-in">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Complete Fitness Programs</h3>
+                    <p class="service-description">Comprehensive workout plans combined with nutrition guidance for optimal results.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Customized Workout Plans</span>
+                        <span><i class="fas fa-check"></i> Video Exercise Library</span>
+                        <span><i class="fas fa-check"></i> Progress Tracking Tools</span>
+                        <span><i class="fas fa-check"></i> Mobile App Access</span>
+                        <span><i class="fas fa-check"></i> Weekly Check-ins</span>
+                    </div>
+                    <div class="service-price">
+                        <span class="price">$149</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <a href="#" class="service-cta premium-cta">Join Now</a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card fade-in">
+                    <i class="fas fa-user-md"></i>
+                    <h3>1:1 Health Coaching</h3>
+                    <p class="service-description">Personal guidance and support from certified health professionals.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Weekly Private Sessions</span>
+                        <span><i class="fas fa-check"></i> Lifestyle Assessment</span>
+                        <span><i class="fas fa-check"></i> Goal Setting & Planning</span>
+                        <span><i class="fas fa-check"></i> 24/7 Chat Support</span>
+                        <span><i class="fas fa-check"></i> Monthly Progress Review</span>
+                    </div>
+                    <div class="service-price">
+                        <span class="price">$199</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <a href="#" class="service-cta">Schedule Consultation</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+       <!-- Team Section -->
+       <section class="team section-padding" id="team">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="team-intro">Our Expert Team</h2>
+                
+            </div>
+            <p class="section-subtitle">Meet the professionals dedicated to your health journey</p>
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member fade-in">
+                    <div class="member-image">
+                        <img src="{{ url_for('static', filename='images/team-1.jpg') }}" alt="Siddhant Gawad">
+                      
+                    </div>
+                    <div class="member-info">
+                        <h3>Siddhant Gawad</h3>
+                        <p class="position">Founder/CEO</p>
+                        <p class="credentials">PhD in Nutrition Science, Certified Dietitian</p>
+                        <p class="bio">With over 10 years of experience, Dr. Smith specializes in weight management and sports nutrition. She has helped hundreds of clients achieve their health goals through personalized nutrition plans.</p>
+                        <div class="specialties">
+                            <span>Weight Management</span>
+                            <span>Sports Nutrition</span>
+                            <span>Meal Planning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member fade-in">
+                    <div class="member-image">
+                        <img src="{{ url_for('static', filename='images/team-2.jpg') }}" alt="Ashwini Gawad">
+                        <div class="social-overlay">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Ashwini Gawad</h3>
+                        <p class="position">Lead Nutritionist</p>
+                        <p class="credentials">NASM Certified, CrossFit Level 2 Trainer</p>
+                        <p class="bio">John brings energy and expertise to every session. His background in competitive sports and rehabilitation helps clients achieve their fitness goals safely and effectively.</p>
+                        <div class="specialties">
+                            <span>Strength Training</span>
+                            <span>HIIT</span>
+                            <span>Rehabilitation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member fade-in">
+                    <div class="member-image">
+                        <img src="{{ url_for('static', filename='images/team-3.jpg') }}" alt="Vidhi Karia">
+                        <div class="social-overlay">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Vidhi Karia</h3>
+                        <p class="position">Co-Founder</p>
+                        <p class="credentials">Certified Health Coach, Mindfulness Practitioner</p>
+                        <p class="bio">Sarah focuses on holistic wellness, helping clients balance nutrition, exercise, and mental well-being. Her approach emphasizes sustainable lifestyle changes.</p>
+                        <div class="specialties">
+                            <span>Stress Management</span>
+                            <span>Lifestyle Design</span>
+                            <span>Mindful Eating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Testimonials</h2>
+               
+            </div>
+         
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in">
+                    <div class="quote">
+                        
+                        <p>I lost 22 pounds and gained my confidence back. The meal plans were easy to follow, and the coaching kept me motivated!</p>
+                        
+                    </div>
+                    <div class="author">
+                        <img src="{{ url_for('static', filename='images/testimonials/testimonial1.jpg') }}" alt="Emily R.">
+
+                        <div class="author-info">
+                            <h4>Emily R.</h4>
+                            <p>Lost 22 lbs in 3 months</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in">
+                    <div class="quote">
+                        
+                        <p>Thanks to the personalized fitness program, I overcame chronic back pain and feel stronger than ever.</p>
+                        
+                    </div>
+                    <div class="author">
+                        <img src="{{ url_for('static', filename='images/testimonials/testimonial2.jpg') }}" alt="Emily R.">
+
+                        <div class="author-info">
+                            <h4>Michael T.</h4>
+                            <p>Fitness Program Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      <!-- Interactive Programs -->
+       <section class="team section-padding">
+        <div class="programs-section">
+            <h2>Interactive Programs & Engagement</h2>
+            <div class="programs-grid">
+                <div class="program-card fade-in">
+                    <i class="fas fa-users"></i>
+                    <h4>Live Challenges</h4>
+                    <p>Join our 12-day metabolic reset program guided by experts.</p>
+                    <a href="#" class="program-link">Learn More</a>
+                </div>
+                
+                <div class="program-card fade-in">
+                    <i class="fas fa-comments"></i>
+                    <h4>Group Support</h4>
+                    <p>Engage with others pursuing similar goals.</p>
+                    <a href="#" class="program-link">Join Community</a>
+                </div>
+                
+                <div class="program-card fade-in">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h4>Exclusive Masterclasses</h4>
+                    <p>Access expert knowledge in digestible formats.</p>
+                    <a href="#" class="program-link">View Schedule</a>
+                </div>
+            </div>
+        </div>
+
+       </section>
+    
+
+    <!-- Social Media -->
+     <section class="team section-padding">
+        <div class="social-section fade-in">
+            <h2 class="social-intro">Stay Connected</h2>
+            <div class="social-platforms">
+                <a href="#" class="social-platform">
+                    <i class="fab fa-instagram"></i>
+                    <span>Daily inspiration and tips</span>
+                </a>
+                <a href="#" class="social-platform">
+                    <i class="fab fa-youtube"></i>
+                    <span>Workout videos, recipes, and more</span>
+                </a>
+            </div>
+        </div>
+
+     </section>
+  
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <span>
+          <i class="fas fa-phone-alt"></i>
+          <p>+1 123 456 7890</p>
+        </span>
+        <span>
+          <i class="fas fa-envelope"></i>
+          <p>support@example.com</p>
+        </span>
+        <span>
+          <i class="fas fa-map-marker-alt"></i>
+          <p>123 Example Street, City, Country</p>
+        </span>
+      </div>
+  
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Example Company. All rights reserved.</p>
+    </div>
+  </footer>
+  
+<!-- <footer>
+<div class="footer-content">
+    <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i>contact@yourdomain.com</p>
+        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Wellness Street, Health District</p>
+    </div>
+
+    <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2025 FitParivaar. All rights reserved.</p>
+</div>
+</footer> -->
+
+    <!-- Connecting Form to Backend -->
+    <script>
+
+
+// MEAL PLAN GEN
+        document.getElementById("mealPlanForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+        
+            let userData = {
+                name: document.getElementById("name").value,
+                age: document.getElementById("age").value,
+                height: document.getElementById("height").value,
+                weight: document.getElementById("weight").value,
+                goal: document.getElementById("goal").value,
+                health_conditions: document.getElementById("health").value.split(","),
+                dietary_preference: document.getElementById("diet").value,
+                nationality: document.getElementById("nationality").value
+            };
+            try {
+        let response = await fetch("http://127.0.0.1:5000/meal-plan", {  // ✅ Fixed API URL
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(userData)
+        });
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch meal plan.");
+        }
+
+        let result = await response.json();
+        document.getElementById("mealPlanOutput").innerText = result.meal_plan;  // ✅ Show response in the frontend
+    } catch (error) {
+        document.getElementById("mealPlanOutput").innerText = "Error fetching meal plan.";
+        console.error(error);
+    }
+           
+        });
+
+
+
+       
+
+        </script>
+        
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    
+</body>
+</html>
